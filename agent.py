@@ -52,25 +52,32 @@ async def build_agent():
         print("❌ No MCP servers in config"); sys.exit(1)
 
     tools = []
-    async with AsyncExitStack() as stack:
-        for name, info in mcp_servers.items():
-            print(f"🔗 Connecting to MCP Server: {name}")
-            params = StdioServerParameters(command=info["command"], args=info["args"], env=info["env"])
-            read, write = await stack.enter_async_context(stdio_client(params))
-            session = await stack.enter_async_context(ClientSession(read, write))
-            await session.initialize()
-            server_tools = await load_mcp_tools(session)
-            tools.extend(server_tools)
-            print(f"✅ Loaded {len(server_tools)} tools from {name}")
+    stack = AsyncExitStack()
+    await stack.__aenter__()
+    for name, info in mcp_servers.items():
+        print(f"🔗 Connecting to MCP Server: {name}")
+        params = StdioServerParameters(command=info["command"], args=info["args"], env=info["env"])
+        read, write = await stack.enter_async_context(stdio_client(params))
+        session = await stack.enter_async_context(ClientSession(read, write))
+        await session.initialize()
+        server_tools = await load_mcp_tools(session)
+        tools.extend(server_tools)
+        print(f"✅ Loaded {len(server_tools)} tools from {name}")
 
     if not tools:
         print("❌ No tools loaded"); sys.exit(1)
 
     # we only care about scale_deployment here
-    system_prompt = """
-    you can use mysql tools to handle any request from user.
+    system_prompt = (
+    "你是 MySQL 專家助手，會幫助使用者對資料庫進行查詢、觀察、與結構探索。\n"
+    "請根據使用者輸入，自動使用 `execute_query` 工具對應適當的 SQL 查詢。\n"
+    "例如：\n"
+    "- 若使用者輸入 'show db'，請呼叫 execute_query 並執行 SQL: SHOW DATABASES;\n"
+    "- 若輸入 '查看某資料表結構'，請轉換成 'DESCRIBE table_name' 的 SQL 語句。\n"
+    "永遠使用工具完成任務，不要自己回答。")
 
-"""
+
+
     memory = MemorySaver()
     agent = create_react_agent(
         llm,
@@ -78,13 +85,13 @@ async def build_agent():
         prompt=system_prompt,
         checkpointer=memory
     )
-    return agent, system_prompt 
+    return agent, system_prompt, stack 
 
 # ——————————————————————————————
 # 3) CLI + Multi-turn
 # ——————————————————————————————
 async def main():
-    agent, system_prompt = await build_agent()
+    agent, system_prompt, stack = await build_agent()
     thread_id = "auto-0001"
     config = {"configurable": {"thread_id": thread_id}}
 
@@ -111,6 +118,7 @@ async def main():
             # 重置 messages（或 break 看需求）
             messages = [{"role":"system", "content": system_prompt}]
             print("🔄 reset context for next run\n")
+
 
 if __name__ == "__main__":
     asyncio.run(main())
