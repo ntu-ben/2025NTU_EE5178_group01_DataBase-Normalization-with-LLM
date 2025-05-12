@@ -20,11 +20,11 @@ class CustomEncoder(json.JSONEncoder):
         return super().default(o)
 
 def read_config_json():
-    config_path = os.getenv("THEAILANGUAGE_CONFIG")
+    config_path = os.getenv("CONFIG")
     if not config_path:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        config_path = os.path.join(script_dir, "theailanguage_config.json")
-        print(f"⚠️  THEAILANGUAGE_CONFIG not set. Falling back to: {config_path}")
+        config_path = os.path.join(script_dir, "config.json")
+        print(f"⚠️  CONFIG not set. Falling back to: {config_path}")
     try:
         with open(config_path, "r") as f:
             return json.load(f)
@@ -55,7 +55,7 @@ async def build_agent():
     async with AsyncExitStack() as stack:
         for name, info in mcp_servers.items():
             print(f"🔗 Connecting to MCP Server: {name}")
-            params = StdioServerParameters(command=info["command"], args=info["args"])
+            params = StdioServerParameters(command=info["command"], args=info["args"], env=info["env"])
             read, write = await stack.enter_async_context(stdio_client(params))
             session = await stack.enter_async_context(ClientSession(read, write))
             await session.initialize()
@@ -68,27 +68,8 @@ async def build_agent():
 
     # we only care about scale_deployment here
     system_prompt = """
-You are AutoScalerBot.
- Goal: you can perform two types of tasks:
- 1) Load testing: user may request to generate load against a target URL/file.
- 2) Autoscaling: keep P95 latency below 250 ms for deployment "cartservice" in namespace "default",
-    without exceeding 10 replicas.
+    you can use mysql tools to handle any request from user.
 
- Tool usage:
- - To run a load test, call:
-     load_gen(target_url: str, users: int, spawn_rate: int, duration: int)
-   Example: load_gen(target_url="http://140.112.18.212", users=100, spawn_rate=10, duration=120)
-
- - To scale deployment, call:
-     scale_deployment(namespace: str, deployment: str, replicas: int)
-   When scaling, read user-supplied current_latency and current_replicas.
-
- Loop rules for autoscaling:
- 1) If user input is two numbers "latency replicas", interpret them as current_latency and current_replicas.
- 2) If current_latency > 250 AND current_replicas < 10, call scale_deployment(...)
- 3) Else respond with FINAL ANSWER: SLA_MET.
-
-Always use the correct tool for the request. Never answer without calling a tool or returning FINAL ANSWER.
 """
     memory = MemorySaver()
     agent = create_react_agent(
@@ -110,7 +91,7 @@ async def main():
     # 初始 messages 包含 system prompt 角色
     messages = [{"role":"system", "content": system_prompt}]
 
-    print("\n🚀 AutoScalerBot ready! Enter 'latency replicas' or 'quit'.")
+    print("\n🚀 DBNormalizeBot ready! Enter 'latency replicas' or 'quit'.")
     while True:
         line = input("Query (latency replicas): ").strip()
         if not line or line.lower() == "quit":
