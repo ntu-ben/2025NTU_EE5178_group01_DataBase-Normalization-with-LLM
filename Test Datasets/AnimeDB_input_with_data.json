@@ -1,0 +1,94 @@
+[
+  {
+    "table_name": "Animation_Studio",
+    "raw_table_data": [
+      {
+        "name": "Mappa",
+        "foundation_date": "2011-06-14",
+        "num_of_workers": "250"
+      },
+      {
+        "name": "ufotable",
+        "foundation_date": "2000-10-10",
+        "num_of_workers": "200"
+      },
+      {
+        "name": "BONES",
+        "foundation_date": "1998-10-10",
+        "num_of_workers": "80"
+      }
+    ]
+  },
+  {
+    "table_name": "Comic_Author",
+    "raw_table_data":[
+      {
+        "name": "岸本齊史",
+        "birthday": "1974-11-08",
+        "education": "九州產業大學"
+      },
+      {
+        "name": "尾田榮一郎",
+        "birthday": "1975-01-01",
+        "education": "九州東方藍大學"
+      },
+      {
+        "name": "鳥山明",
+        "birthday": "1955-04-05",
+        "education": "高中"
+      }
+    ]
+  },
+  {
+    "table_name": "Screen_Writer",
+    "raw_table_data":[
+      {
+        "name": "富岡純廣",
+        "birthday": "1967-11-25",
+        "education": "無"
+      },
+      {
+        "name": "小太刀右京",
+        "birthday": "1979-04-01",
+        "education": "無"
+      },
+      {
+        "name": "米村正二",
+        "birthday": "1964-01-01",
+        "education": "無"
+      }
+    ]
+  },
+  {
+    "table_name": "Animation",
+    "raw_table_data":[]
+  },
+  {
+    "table_name": "Animation_Main_Character",
+    "raw_table_data":[]
+  },
+  {
+    "table_name": "Anime_Series",
+    "raw_table_data":[]
+  },
+  {
+    "table_name": "Series",
+    "raw_table_data":[]
+  },
+    {
+    "table_name": "Anime_Movie",
+    "raw_table_data":[]
+  },
+    {
+    "table_name": "Adaption",
+    "raw_table_data":[]
+  },
+    {
+    "table_name": "Original",
+    "raw_table_data":[]
+  },
+    {
+    "table_name": "Creator",
+    "raw_table_data":[]
+  }
+]

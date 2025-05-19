@@ -1,0 +1,29 @@
+{
+  "tables": {
+    "Animation_Studio": ["name", "foundation_date", "num_of_workers"],
+    "Comic_Author": ["name", "birthday", "education"],
+    "Screen_Writer": ["name", "birthday", "education"],
+    "Animation": ["id", "title", "description"],
+    "Animation_Main_Character": ["main_character", "id"],
+    "Anime_Series": ["id", "company_name"],
+    "Series": ["series_number", "id", "num_of_episode", "series_name", "author_name", "animation_studio_name"],
+    "Anime_Movie": ["id", "company_name"],
+    "Adaption": ["id", "author_name", "animation_studio_name"],
+    "Original": ["id", "sequal_id", "author_name", "screenwriter_name"],
+    "Creator": ["name", "comment", "evaluation", "representative_work", "entity_type"]
+  },
+  "keys": {
+    "Animation_Studio": ["name (PK)"],
+    "Comic_Author": ["name (PK)"],
+    "Screen_Writer": ["name (PK)"],
+    "Animation": ["id (PK)"],
+    "Animation_Main_Character": ["id, main_character (PK)", "id (FK)"],
+    "Anime_Series": ["id (PK)", "id (FK)"],
+    "Series": ["id, series_number (PK)", "id (FK)", "author_name (FK)", "animation_studio_name (FK)"],
+    "Anime_Movie": ["id (PK)", "id (FK)"],
+    "Adaption": ["id (PK)", "id (FK)", "author_name (FK)", "animation_studio_name (FK)"],
+    "Original": ["id (PK)", "id (FK)", "sequal_id (FK)", "author_name (FK)", "screenwriter_name (FK)"],
+    "Creator": ["name (PK)", "name (FK)"]
+  },
+  "explanation": ""
+}
