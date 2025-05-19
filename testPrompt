@@ -1,0 +1,2 @@
+{"table_name":"T","attributes":["mId","gId","mName","gName","gType","gTypeDesc","dateTime","price","ip"],"functional_dependencies":[["mId",["mName"]],["gId",["gName","gType","gTypeDesc"]],["gType",["gTypeDesc"]],[["mId","gId","dateTime"],["price","ip"]],["ip",["mId"]]]}
+
