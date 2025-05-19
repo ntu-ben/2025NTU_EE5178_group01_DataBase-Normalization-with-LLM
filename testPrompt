@@ -1,2 +1,1 @@
-{"table_name":"T","attributes":["mId","gId","mName","gName","gType","gTypeDesc","dateTime","price","ip"],"functional_dependencies":[["mId",["mName"]],["gId",["gName","gType","gTypeDesc"]],["gType",["gTypeDesc"]],[["mId","gId","dateTime"],["price","ip"]],["ip",["mId"]]]}
-
+{"relation":"LoanDetails","attributes":["loanID","memberID","memberName","memberPhone","bookID","ISBN","title","authorID","authorName","branchID","branchName","loanDate","dueDate"],"functional_dependencies":[["memberID",["memberName","memberPhone"]],["ISBN",["title","authorID"]],["authorID",["authorName"]],["branchID",["branchName"]],["bookID",["ISBN"]],[["loanID"],["memberID","bookID","branchID","loanDate","dueDate"]]]} to 3nf
