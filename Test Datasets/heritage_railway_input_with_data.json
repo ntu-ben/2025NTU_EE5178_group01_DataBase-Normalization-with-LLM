@@ -1,0 +1,899 @@
+[
+  {
+    "table_name": "trains",
+    "raw_table_data": [
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1001", 
+        "train_type": "Tour", 
+        "origin": "Station A", 
+        "destination": "Station C", 
+        "driver_id": "25001", 
+        "conductor_id": "25002"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1002", 
+        "train_type": "Tour", 
+        "origin": "Station C", 
+        "destination": "Station A", 
+        "driver_id": "25001", 
+        "conductor_id": "25002"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1003", 
+        "train_type": "Tour", 
+        "origin": "Station A", 
+        "destination": "Station C", 
+        "driver_id": "25003", 
+        "conductor_id": "25004"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1004", 
+        "train_type": "Tour", 
+        "origin": "Station C", 
+        "destination": "Station A", 
+        "driver_id": "25003", 
+        "conductor_id": "25004"
+      }
+    ]
+  },
+  {
+    "table_name": "attendants",
+    "raw_table_data":[
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1001", 
+        "seq": "1", 
+        "attendants_id": "25501"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1001", 
+        "seq": "2", 
+        "attendants_id": "25502"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1001", 
+        "seq": "3", 
+        "attendants_id": "25503"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1002", 
+        "seq": "1", 
+        "attendants_id": "25501"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1002", 
+        "seq": "2", 
+        "attendants_id": "25502"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1002", 
+        "seq": "3", 
+        "attendants_id": "25503"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1003", 
+        "seq": "1", 
+        "attendants_id": "25504"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1003", 
+        "seq": "2", 
+        "attendants_id": "25505"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1003", 
+        "seq": "3", 
+        "attendants_id": "25506"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1004", 
+        "seq": "1", 
+        "attendants_id": "25504"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1004", 
+        "seq": "2", 
+        "attendants_id": "25505"
+      },
+      {
+        "running_date": "2025-03-27", 
+        "train_id": "1004", 
+        "seq": "3", 
+        "attendants_id": "25506"
+      }
+    ]
+  },
+  {
+    "table_name": "timetable",
+    "raw_table_data":[
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "station_sequence": 1,
+        "station_name": "Station A",
+        "arrival_time": null,
+        "drparture_time": "10:00:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "station_sequence": 2,
+        "station_name": "Station B",
+        "arrival_time": "10:03:00",
+        "drparture_time": "10:05:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "station_sequence": 3,
+        "station_name": "Station C",
+        "arrival_time": "10:08:00",
+        "drparture_time": null,
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "station_sequence": 1,
+        "station_name": "Station C",
+        "arrival_time": null,
+        "drparture_time": "10:10:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "station_sequence": 2,
+        "station_name": "Station B",
+        "arrival_time": "10:13:00",
+        "drparture_time": "10:15:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "station_sequence": 3,
+        "station_name": "Station A",
+        "arrival_time": "10:18:00",
+        "drparture_time": null,
+        "pass_time": null,
+        "meet_train_running_date": "2025-03-27",
+        "meet_train_id": "1003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "station_sequence": 1,
+        "station_name": "Station A",
+        "arrival_time": null,
+        "drparture_time": "10:10:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "station_sequence": 2,
+        "station_name": "Station B",
+        "arrival_time": "10:13:00",
+        "drparture_time": "10:15:00",
+        "pass_time": null,
+        "meet_train_running_date": "2025-03-27",
+        "meet_train_id": "1003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "station_sequence": 3,
+        "station_name": "Station C",
+        "arrival_time": "10:18:00",
+        "drparture_time": null,
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "station_sequence": 1,
+        "station_name": "Station C",
+        "arrival_time": null,
+        "drparture_time": "10:20:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "station_sequence": 2,
+        "station_name": "Station B",
+        "arrival_time": "10:23:00",
+        "drparture_time": "10:25:00",
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "station_sequence": 3,
+        "station_name": "Station A",
+        "arrival_time": "10:28:00",
+        "drparture_time": null,
+        "pass_time": null,
+        "meet_train_running_date": null,
+        "meet_train_id": null
+      }
+    ]
+  },
+  {
+    "table_name": "Insurance",
+    "raw_table_data":[
+      {
+        "insurance_id": "202503001",
+        "insurance_premium": 100,
+        "sum_assured": 1000000
+      },
+      {
+        "insurance_id": "202503002",
+        "insurance_premium": 500,
+        "sum_assured": 5000000
+      },
+      {
+        "insurance_id": "202503003",
+        "insurance_premium": 500,
+        "sum_assured": 5000000
+      }
+    ]
+  },
+  {
+    "table_name": "rolling_stock",
+    "raw_table_data":[
+      {
+        "rsid": "20C10001",
+        "body_length": 10,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "20C10002",
+        "body_length": 10,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "20C10003",
+        "body_length": 10,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "30G10001",
+        "body_length": 15,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "30G10002",
+        "body_length": 15,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "3CK501",
+        "body_length": 6.5,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 1,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": "15GK201"
+      },
+      {
+        "rsid": "D101",
+        "body_length": 5,
+        "last_mantainance_date": "2025-01-01",
+        "is_locomotive": 1,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503003",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "D102",
+        "body_length": 5,
+        "last_mantainance_date": "2025-01-01",
+        "is_locomotive": 1,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503003",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "D103",
+        "body_length": 5,
+        "last_mantainance_date": "2025-01-01",
+        "is_locomotive": 1,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 0,
+        "insurance_id": "202503002",
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "D104",
+        "body_length": 5,
+        "last_mantainance_date": null,
+        "is_locomotive": 1,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 0,
+        "insurance_id": null,
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "10F101",
+        "body_length": 7,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 1,
+        "insurance_id": null,
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "10F102",
+        "body_length": 7,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 1,
+        "insurance_id": null,
+        "cannot_couple_with": null
+      },
+      {
+        "rsid": "15GK201",
+        "body_length": 7,
+        "last_mantainance_date": null,
+        "is_locomotive": 0,
+        "is_passenger_carriage": 0,
+        "is_engineering_carriage": 1,
+        "insurance_id": null,
+        "cannot_couple_with": "3CK501"
+      }
+    ]
+  },
+  {
+    "table_name": "locomotive",
+    "raw_table_data":[
+      {
+        "rsid": "D101",
+        "traction_limit": 200,
+        "engine_type": "Diesel",
+        "engine_usable": 1
+      },
+      {
+        "rsid": "D102",
+        "traction_limit": 200,
+        "engine_type": "Diesel",
+        "engine_usable": 1
+      },
+      {
+        "rsid": "D103",
+        "traction_limit": 200,
+        "engine_type": "Diesel",
+        "engine_usable": 1
+      },
+      {
+        "rsid": "D104",
+        "traction_limit": 200,
+        "engine_type": "Diesel",
+        "engine_usable": 1
+      }
+    ]
+  },
+  {
+    "table_name": "passenger_carriage",
+    "raw_table_data":[
+      {
+        "rsid": "20C10001",
+        "seating_capacity": 30,
+        "standing_capacity": 10,
+        "door_amt": 4
+      },
+      {
+        "rsid": "20C10002",
+        "seating_capacity": 30,
+        "standing_capacity": 10,
+        "door_amt": 4
+      },
+      {
+        "rsid": "20C10003",
+        "seating_capacity": 30,
+        "standing_capacity": 10,
+        "door_amt": 4
+      },
+      {
+        "rsid": "30G10001",
+        "seating_capacity": 20,
+        "standing_capacity": 20,
+        "door_amt": 6
+      },
+      {
+        "rsid": "30G10002",
+        "seating_capacity": 20,
+        "standing_capacity": 20,
+        "door_amt": 6
+      },
+      {
+        "rsid": "3CK501",
+        "seating_capacity": 5,
+        "standing_capacity": 10,
+        "door_amt": 2
+      }
+    ]
+  },
+    {
+    "table_name": "engineering_carriage",
+    "raw_table_data":[
+      {
+        "rsid": "10F101",
+        "functions": "",
+        "in_use": 1
+      },
+      {
+        "rsid": "10F102",
+        "functions": "",
+        "in_use": 0
+      },
+      {
+        "rsid": "15GK201",
+        "functions": "covered,panel,caboose",
+        "in_use": 1
+      }
+    ]
+  },
+    {
+    "table_name": "train_composition",
+    "raw_table_data":[
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "carriage_sequence": 1,
+        "rsid": "D101"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "carriage_sequence": 2,
+        "rsid": "20C10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "carriage_sequence": 3,
+        "rsid": "20C10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "carriage_sequence": 4,
+        "rsid": "30G10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "carriage_sequence": 5,
+        "rsid": "D102"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "carriage_sequence": 1,
+        "rsid": "D101"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "carriage_sequence": 2,
+        "rsid": "20C10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "carriage_sequence": 3,
+        "rsid": "20C10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "carriage_sequence": 4,
+        "rsid": "30G10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "carriage_sequence": 5,
+        "rsid": "D102"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "carriage_sequence": 1,
+        "rsid": "D103"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "carriage_sequence": 2,
+        "rsid": "3CK501"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "carriage_sequence": 3,
+        "rsid": "30G10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "carriage_sequence": 4,
+        "rsid": "20C10003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "carriage_sequence": 5,
+        "rsid": "D104"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "carriage_sequence": 1,
+        "rsid": "D103"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "carriage_sequence": 2,
+        "rsid": "3CK501"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "carriage_sequence": 3,
+        "rsid": "30G10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "carriage_sequence": 4,
+        "rsid": "20C10003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "carriage_sequence": 5,
+        "rsid": "D104"
+      }
+    ]
+  },
+    {
+    "table_name": "employee",
+    "raw_table_data":[
+      {
+        "employee_id": "25001",
+        "name": "Employee A",
+        "working_hours": 100,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25002",
+        "name": "Employee B",
+        "working_hours": 90,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25003",
+        "name": "Employee I",
+        "working_hours": 50,
+        "insurance_id": null
+      },
+      {
+        "employee_id": "25004",
+        "name": "Employee J",
+        "working_hours": 40,
+        "insurance_id": null
+      },
+      {
+        "employee_id": "25501",
+        "name": "Employee C",
+        "working_hours": 72,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25502",
+        "name": "Employee D",
+        "working_hours": 48,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25503",
+        "name": "Employee E",
+        "working_hours": 40,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25504",
+        "name": "Employee F",
+        "working_hours": 16,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25505",
+        "name": "Employee G",
+        "working_hours": 24,
+        "insurance_id": "202503001"
+      },
+      {
+        "employee_id": "25506",
+        "name": "Employee H",
+        "working_hours": 16,
+        "insurance_id": "202503001"
+      }
+    ]
+  },
+    {
+    "table_name": "volunteer",
+    "raw_table_data":[
+      {
+        "employee_id": "25001",
+        "meal_allowance": 800,
+        "traffic_allowance": 0,
+        "licence": "driving,conducting"
+      },
+      {
+        "employee_id": "25002",
+        "meal_allowance": 800,
+        "traffic_allowance": 1000,
+        "licence": "driving,conducting"
+      },
+      {
+        "employee_id": "25003",
+        "meal_allowance": 720,
+        "traffic_allowance": 0,
+        "licence": "driving,conducting"
+      },
+      {
+        "employee_id": "25004",
+        "meal_allowance": 48,
+        "traffic_allowance": 0,
+        "licence": "conducting"
+      }
+    ]
+  },
+  {
+    "table_name": "part_time_worker",
+    "raw_table_data":[
+      {
+        "employee_id": "25001",
+        "salary": 4000,
+        "general_training": 1,
+        "broadcaster_training": 1
+      },
+      {
+        "employee_id": "25002",
+        "salary": 2000,
+        "general_training": 1,
+        "broadcaster_training": 1
+      },
+      {
+        "employee_id": "25501",
+        "salary": 14400,
+        "general_training": 1,
+        "broadcaster_training": 1
+      },
+      {
+        "employee_id": "25502",
+        "salary": 9600,
+        "general_training": 1,
+        "broadcaster_training": 1
+      },
+      {
+        "employee_id": "25503",
+        "salary": 8000,
+        "general_training": 1,
+        "broadcaster_training": 0
+      },
+      {
+        "employee_id": "25504",
+        "salary": 3200,
+        "general_training": 1,
+        "broadcaster_training": 0
+      },
+      {
+        "employee_id": "25505",
+        "salary": 4800,
+        "general_training": 1,
+        "broadcaster_training": 1
+      },
+      {
+        "employee_id": "25506",
+        "salary": 3200,
+        "general_training": 1,
+        "broadcaster_training": 0
+      }
+    ]
+  },
+    {
+    "table_name": "employee_service",
+    "raw_table_data":[
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "employee_id": "25001",
+        "rsid": "D101"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "employee_id": "25501",
+        "rsid": "20C10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "employee_id": "25502",
+        "rsid": "20C10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "employee_id": "25503",
+        "rsid": "30G10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1001",
+        "employee_id": "25002",
+        "rsid": "D102"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "employee_id": "25001",
+        "rsid": "D101"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "employee_id": "25501",
+        "rsid": "20C10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "employee_id": "25502",
+        "rsid": "20C10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "employee_id": "25503",
+        "rsid": "30G10001"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1002",
+        "employee_id": "25002",
+        "rsid": "D102"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "employee_id": "25004",
+        "rsid": "D103"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "employee_id": "25504",
+        "rsid": "3CK501"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "employee_id": "25505",
+        "rsid": "30G10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "employee_id": "25506",
+        "rsid": "20C10003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1003",
+        "employee_id": "25003",
+        "rsid": "D104"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "employee_id": "25004",
+        "rsid": "D103"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "employee_id": "25504",
+        "rsid": "3CK501"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "employee_id": "25505",
+        "rsid": "30G10002"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "employee_id": "25506",
+        "rsid": "20C10003"
+      },
+      {
+        "running_date": "2025-03-27",
+        "train_id": "1004",
+        "employee_id": "25003",
+        "rsid": "D104"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "tables": {
+    "trains": ["running_date", "train_id", "train_type", "origin", "destination", "driver_id", "conductor_id"],
+    "attendants": ["running_date", "train_id", "seq", "attendants_id"],
+    "timetable": ["running_date", "train_id", "station_sequence", "station_name", "arrival_time", "drparture_time", "pass_time", "meet_train_running_date", "meet_train_id"],
+    "insurance": ["insurance_id", "insurance_premium", "sum_assured"],
+    "rolling_stock": ["rsid", "body_length", "last_mantainance_date", "is_locomotive", "is_passenger_carriage", "is_engineering_carriage", "insurance_id", "cannot_couple_with"],
+    "locomotive": ["rsid", "traction_limit", "engine_type", "engine_usable"],
+    "passenger_carriage": ["rsid", "seating_capacity", "standing_capacity", "door_amt"],
+    "engineering_carriage":["rsid", "functions", "in_use"],
+    "train_composition": ["running_date", "train_id", "carriage_sequence", "rsid"],
+    "employee": ["employee_id", "name", "working_hours", "insurance_id"],
+    "volunteer":["employee_id", "meal_allowance", "traffic_allowance", "licence"],
+    "part_time_worker": ["employee_id", "salary", "general_training", "broadcaster_training"],
+    "employee_service": ["running_date", "train_id", "employee_id", "rsid"]
+  },
+  "keys": {
+    "trains": ["running_date, train_id (PK)"],
+    "attendants": ["running_date, train_id, seq (PK)", "running_date, train_id (FK)"], 
+    "timetable": ["running_date, train_id, station_sequence (PK)", "running_date, train_id (FK)", "meet_train_running_date, meet_train_id (FK)"],
+    "insurance": ["insurance_id (PK)"],
+    "rolling_stock": ["rsid (PK)", "insurance_id (FK)", "cannot_couple_with (FK)"],
+    "locomotive": ["rsid (PK)", "rsid (FK)"],
+    "passenger_carriage": ["rsid (PK)", "rsid (FK)"],
+    "engineering_carriage": ["rsid (PK)", "rsid (FK)"],
+    "train_composition": ["running_date, train_id, carriage_sequence (PK)", "running_date, train_id (FK)", "rsid (FK)"],
+    "employee": ["employee_id (PK)", "insurance_id (FK)"],
+    "volunteer": ["employee_id (PK)", "employee_id (FK)"],
+    "part_time_worker": ["employee_id (PK)", "employee_id (FK)"],
+    "employee_service": ["running_date, train_id, employee_id (PK)", "running_date, train_id (FK)", "employee_id (FK)", "rsid (FK)"]
+  },
+  "explanation": ""
+}
