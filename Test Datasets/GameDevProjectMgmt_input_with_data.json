@@ -1,0 +1,325 @@
+[
+  {
+    "table_name": "Project",
+    "raw_table_data": [
+      {
+        "project_id": "10",
+        "title": "Cyber Heist",
+        "budget": "95000.00",
+        "start_date": "2024-04-01",
+        "end_date": "2025-03-31",
+        "client_id": "403"
+      },
+      {
+        "project_id": "11",
+        "title": "Dragon Legacy",
+        "budget": "110000.00",
+        "start_date": "2024-05-15",
+        "end_date": "2025-04-30",
+        "client_id": "402"
+      },
+      {
+        "project_id": "12",
+        "title": "Skyline Racer",
+        "budget": "85000.00",
+        "start_date": "2024-06-01",
+        "end_date": "2025-02-28",
+        "client_id": "401"
+      }
+    ]
+  },
+  {
+    "table_name": "Developer",
+    "raw_table_data": [
+      {
+        "developer_id": "201",
+        "name": "Dave",
+        "email": "dave@studio.com",
+        "skill_set": "Unreal, Blueprint"
+      },
+      {
+        "developer_id": "202",
+        "name": "Emma",
+        "email": "emma@studio.com",
+        "skill_set": "3D Modeling, Blender"
+      },
+      {
+        "developer_id": "203",
+        "name": "Frank",
+        "email": "frank@studio.com",
+        "skill_set": "Gameplay Design, C#"
+      },
+      {
+        "developer_id": "204",
+        "name": "Grace",
+        "email": "grace@studio.com",
+        "skill_set": "UI/UX, Figma"
+      }
+    ]
+  },
+  {
+    "table_name": "Game",
+    "raw_table_data": [
+      {
+        "game_id": "301",
+        "title": "Digital Uprising",
+        "genre": "action",
+        "platform": "Console",
+        "project_id": "10"
+      },
+      {
+        "game_id": "302",
+        "title": "Winged Realms",
+        "genre": "RPG",
+        "platform": "PC",
+        "project_id": "11"
+      },
+      {
+        "game_id": "303",
+        "title": "Turbo Trails",
+        "genre": "shooting",
+        "platform": "Mobile",
+        "project_id": "12"
+      }
+    ]
+  },
+  {
+    "table_name": "Task",
+    "raw_table_data": [
+      {
+        "task_id": "401",
+        "task_name": "Main Menu Design",
+        "deadline": "2024-07-10",
+        "description": "Create interactive UI with animations",
+        "developer_id": "204"
+      },
+      {
+        "task_id": "402",
+        "task_name": "Enemy AI",
+        "deadline": "2024-08-15",
+        "description": "Build adaptive enemy logic",
+        "developer_id": "201"
+      },
+      {
+        "task_id": "403",
+        "task_name": "3D Car Models",
+        "deadline": "2024-07-01",
+        "description": "Design vehicles for Skyline Racer",
+        "developer_id": "202"
+      },
+      {
+        "task_id": "404",
+        "task_name": "Combat System",
+        "deadline": "2024-09-05",
+        "description": "Implement player combat interactions",
+        "developer_id": "203"
+      }
+    ]
+  },
+  {
+    "table_name": "Client",
+    "raw_table_data": [
+      {
+        "client_id": "401",
+        "name": "PlayHub",
+        "company": "PlayHub Co.",
+        "phone_number": "111-222-3333",
+        "email": "games@playhub.com"
+      },
+      {
+        "client_id": "402",
+        "name": "NextGen",
+        "company": "NextGen Ltd.",
+        "phone_number": "555-888-7777",
+        "email": "contact@nextgen.com"
+      },
+      {
+        "client_id": "403",
+        "name": "VR Solutions",
+        "company": "VRS Inc.",
+        "phone_number": "222-333-4444",
+        "email": "contact@vrs.com"
+      }
+    ]
+  },
+  {
+    "table_name": "Publisher",
+    "raw_table_data": [
+      {
+        "publisher_id": "501",
+        "name": "GameForge",
+        "company": "GF International"
+      },
+      {
+        "publisher_id": "502",
+        "name": "NextPlay",
+        "company": "NextPlay Ltd"
+      }
+    ]
+  },
+  {
+    "table_name": "SoftwareTool",
+    "raw_table_data": [
+      {
+        "tool_id": "701",
+        "tool_name": "Blender",
+        "license_type": "Open Source"
+      },
+      {
+        "tool_id": "702",
+        "tool_name": "Figma",
+        "license_type": "Freemium"
+      },
+      {
+        "tool_id": "703",
+        "tool_name": "Godot Engine",
+        "license_type": "Open Source"
+      }
+    ]
+  },
+  {
+    "table_name": "Milestone",
+    "raw_table_data": [
+      {
+        "milestone_id": "1",
+        "project_id": "10",
+        "milestone_name": "Vertical Slice Ready",
+        "due_date": "2024-09-30"
+      },
+      {
+        "milestone_id": "2",
+        "project_id": "11",
+        "milestone_name": "Playable Alpha",
+        "due_date": "2024-11-15"
+      },
+      {
+        "milestone_id": "3",
+        "project_id": "12",
+        "milestone_name": "Closed Beta Test",
+        "due_date": "2025-01-10"
+      }
+    ]
+  },
+  {
+    "table_name": "FullTimeDeveloper",
+    "raw_table_data": [
+      {
+        "developer_id": "201",
+        "office_location": "HQ - Room 10"
+      },
+      {
+        "developer_id": "204",
+        "office_location": "HQ - Room 11"
+      }
+    ]
+  },
+  {
+    "table_name": "Freelancer",
+    "raw_table_data": [
+      {
+        "developer_id": "202",
+        "contract_sign_date": "2024-03-10"
+      },
+      {
+        "developer_id": "202",
+        "contract_sign_date": "2024-09-01"
+      },
+      {
+        "developer_id": "203",
+        "contract_sign_date": "2024-04-15"
+      }
+    ]
+  },
+  {
+    "table_name": "Employee",
+    "raw_table_data": [
+      {
+        "developer_id": "2"
+      },
+      {
+        "developer_id": "2"
+      }
+    ]
+  },
+  {
+    "table_name": "ProductManager",
+    "raw_table_data": [
+      {
+        "developer_id": "2"
+      }
+    ]
+  },
+  {
+    "table_name": "BusinessPartner",
+    "raw_table_data": [
+      {
+        "partner_id": "401"
+      },
+      {
+        "partner_id": "403"
+      },
+      {
+        "partner_id": "501"
+      }
+    ]
+  },
+  {
+    "table_name": "ProjectDeveloper",
+    "raw_table_data": [
+      {
+        "project_id": "10",
+        "developer_id": "201"
+      },
+      {
+        "project_id": "10",
+        "developer_id": "202"
+      },
+      {
+        "project_id": "11",
+        "developer_id": "203"
+      },
+      {
+        "project_id": "12",
+        "developer_id": "204"
+      },
+      {
+        "project_id": "12",
+        "developer_id": "202"
+      }
+    ]
+  },
+  {
+    "table_name": "ProjectTool",
+    "raw_table_data": [
+      {
+        "project_id": "10",
+        "tool_id": "701"
+      },
+      {
+        "project_id": "11",
+        "tool_id": "702"
+      },
+      {
+        "project_id": "12",
+        "tool_id": "703"
+      }
+    ]
+  },
+  {
+    "table_name": "TaskDependency",
+    "raw_table_data": [
+      {
+        "task_id": "402",
+        "depends_on_task_id": "401"
+      },
+      {
+        "task_id": "404",
+        "depends_on_task_id": "402"
+      },
+      {
+        "task_id": "403",
+        "depends_on_task_id": "401"
+      }
+    ]
+  }
+]
