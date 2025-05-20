@@ -1,0 +1,19 @@
+{
+  "tables": {
+    "User": ["user_id", "first_name", "last_name", "email"],
+    "Product": ["product_id", "name", "price", "category"],
+    "Order": ["order_id", "date", "total_amount", "user_id"],
+    "Payment":["payment_id", "method", "status"],
+    "Review": ["review_id", "product_id", "rating", "comment"], 
+    "PotentialCustomer": ["customer_id", "user_id", "guest_id", "customer_type"]
+  },
+  "keys": {
+    "User": ["user_id (PK)"],
+    "Product": ["product_id (PK)"],
+    "Order": ["order_id (PK)", "user_id (FK)"],
+    "Payment":["payment_id (PK)"],
+    "Review": ["review_id, product_id (PK)", "product_id (FK)"],
+    "PotentialCustomer": ["customer_id (PK)", "user_id (FK)"]
+  },
+  "explanation": ""
+}

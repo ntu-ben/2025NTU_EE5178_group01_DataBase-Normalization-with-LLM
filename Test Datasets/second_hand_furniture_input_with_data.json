@@ -1,0 +1,118 @@
+[
+  {
+    "table_name": "User",
+    "raw_table_data": [
+      {
+        "user_id": 1,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john@example.com"
+      },
+      {
+        "user_id": 2,
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "email": "jane@gmail.com"
+      },
+      {
+        "user_id": 3,
+        "first_name": "Alice",
+        "last_name": "Chen",
+        "email": "alice@example.com"
+      }
+    ]
+  },
+  {
+    "table_name": "Product",
+    "raw_table_data": [
+      {
+        "product_id": 101,
+        "name": "Wood Chair",
+        "price": 200,
+        "category": "furniture,used"
+      },
+      {
+        "product_id": 102,
+        "name": "Dining Table",
+        "price": 1500,
+        "category": "furniture,new"
+      },
+      {
+        "product_id": 103,
+        "name": "Lamp",
+        "price": 300,
+        "category": "furniture,used"
+      }
+    ]
+  },
+  {
+    "table_name": "Order",
+    "raw_table_data": [
+      {
+        "order_id": 201,
+        "date": "2025-03-20",
+        "total_amount": 1700,
+        "user_id": 1
+      },
+      {
+        "order_id": 202,
+        "date": "2025-03-22",
+        "total_amount": 300,
+        "user_id": 2
+      },
+      {
+        "order_id": 203,
+        "date": "2025-03-25",
+        "total_amount": 2000,
+        "user_id": 3
+      }
+    ]
+  },
+  {
+    "table_name": "Payment",
+    "raw_table_data": [
+      {
+        "payment_id": 501,
+        "method": "CreditCard",
+        "status": "completed"
+      },
+      {
+        "payment_id": 502,
+        "method": "BankTransfer",
+        "status": "pending"
+      },
+      {
+        "payment_id": 503,
+        "method": "CreditCard",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "table_name": "Review",
+    "raw_table_data": [
+      {
+        "review_id": 1,
+        "product_id": 101,
+        "rating": 4,
+        "comment": "Good condition"
+      },
+      {
+        "review_id": 2,
+        "product_id": 102,
+        "rating": 5,
+        "comment": "Brand new"
+      },
+      {
+        "review_id": 3,
+        "product_id": 103,
+        "rating": 3,
+        "comment": "Fair quality"
+      }
+    ]
+  },
+  {
+    "table_name": "PotentialCustomer",
+    "raw_table_data": []
+  }
+]
