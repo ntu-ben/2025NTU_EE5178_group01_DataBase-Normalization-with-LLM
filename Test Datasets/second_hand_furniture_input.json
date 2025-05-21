@@ -13,7 +13,7 @@
     "Order": ["order_id (PK)", "user_id (FK)", "first_name (FK)", "last_name (FK)", "email (FK)"],
     "Payment":["payment_id (PK)"],
     "Review": ["review_id, product_id (PK)", "product_id (FK)", "product_id (FK)", "name (FK)", "price (FK)", "category (FK)"],
-    "PotentialCustomer": ["customer_id (PK)", "user_id (FK)"]
+    "PotentialCustomer": ["customer_id (PK)", "user_id (FK)", "first_name (FK)", "last_name (FK)"]
   },
   "functional_dependencies":[
     ["user_id", ["first_name", "last_name", "email"]],
