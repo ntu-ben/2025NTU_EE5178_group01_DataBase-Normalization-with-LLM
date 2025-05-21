@@ -15,5 +15,15 @@
     "Review": ["review_id, product_id (PK)", "product_id (FK)"],
     "PotentialCustomer": ["customer_id (PK)", "user_id (FK)"]
   },
+  "functional_dependencies":[
+    ["user_id", ["first_name", "last_name", "email"]],
+    ["product_id", ["name", "price", "category"]],
+    ["order_id", ["date", "total_amount", "user_id"]],
+    ["payment_id", ["method", "status"]],
+    ["review_id", ["product_id", "rating", "comment"]],
+    ["customer_id", ["user_id", "guest_id", "customer_type"]],
+    ["user_id", ["customer_type"]],
+    ["guest_id", ["customer_type"]]
+  ],
   "explanation": ""
 }
