@@ -20,7 +20,7 @@
     ["product_id", ["name", "price", "category"]],
     ["order_id", ["date", "total_amount", "user_id"]],
     ["payment_id", ["method", "status"]],
-    ["review_id", ["product_id", "rating", "comment"]],
+    ["review_id, product_id", ["rating", "comment"]],
     ["customer_id", ["user_id", "guest_id", "customer_type"]],
     ["user_id", ["customer_type"]],
     ["guest_id", ["customer_type"]]
