@@ -1,0 +1,24 @@
+{
+  "tables": {
+    "trains": ["running_date", "train_id", "train_type", "origin", "destination", "driver_id", "conductor_id", "attendants_id_sequence", "station_name_sequence", "arrival_time_sequence", "drparture_time_sequence", "pass_time_sequence","meet_train_running_date_sequence", "meet_train_id_sequence", "carriage_rsid_sequence", "service_employee_id_by_carriage_sequence", "service_employee_name_by_carriage_sequence"],
+    "rolling_stock": ["rsid", "body_length", "last_mantainance_date", "is_locomotive", "is_passenger_carriage", "is_engineering_carriage", "insurance_id", "insurance_premium", "sum_assured", "cannot_couple_with", "traction_limit", "engine_type", "engine_usable", "seating_capacity", "standing_capacity", "door_amt", "functions", "in_use"],
+    "employee": ["employee_id", "employee_name", "working_hours", "is_volunteer", "is_part_time_worker", "insurance_id", "insurance_premium", "sum_assured", "meal_allowance", "traffic_allowance", "licence", "salary", "general_training", "broadcaster_training"]
+  },
+  "keys": {
+    "trains": ["running_date, train_id (PK)"],
+    "rolling_stock": ["rsid (PK)"],
+    "employee": ["employee_id (PK)"]
+  },
+  "functional_dependencies":[
+    ["running_date, train_id", ["train_type", "origin", "destination", "driver_id", "conductor_id", "attendants_id_sequence", "station_name_sequence", "arrival_time_sequence", "drparture_time_sequence", "pass_time_sequence","meet_train_running_date_sequence", "meet_train_id_sequence", "carriage_rsid_sequence", "service_employee_id_by_carriage_sequence", "service_employee_name_by_carriage_sequence"]],
+    ["insurance_id", ["insurance_premium", "sum_assured"]],
+    ["rsid", ["body_length", "last_mantainance_date", "is_locomotive", "is_passenger_carriage", "is_engineering_carriage", "insurance_id", "insurance_id", "insurance_premium", "cannot_couple_with", "traction_limit", "engine_type", "engine_usable", "seating_capacity", "standing_capacity", "door_amt", "functions", "in_use"]],
+    ["traction_limit, engine_type, engine_usable", ["is_locomotive"]],
+    ["seating_capacity, standing_capacity, door_amt", ["is_passenger_carriage"]],
+    ["functions, in_use", ["is_engineering_carriage"]],
+    ["employee_id", ["employee_name", "working_hours", "insurance_id", "insurance_id", "insurance_premium", "meal_allowance", "traffic_allowance", "licence", "salary", "general_training", "broadcaster_training"]],
+    ["meal_allowance, traffic_allowance", ["is_volunteer"]],
+    ["licence, salary, general_training, broadcaster_training", ["is_part_time_worker"]]
+  ],
+  "explanation": ""
+}

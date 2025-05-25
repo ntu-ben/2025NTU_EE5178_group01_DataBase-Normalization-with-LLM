@@ -12,9 +12,9 @@
         "Freelancer": ["developer_id", "contract_sign_date"],
         "Employee": ["developer_id"],
         "ProductManager": ["developer_id"],
-        "BusinessPartner": ["partner_id"],
+        "BusinessPartner": ["partner_id", "type"],
         "ProjectDeveloper": ["project_id", "developer_id"],
-        "ProjectTool": ["project_id", "tool_id", ""],
+        "ProjectTool": ["project_id", "tool_id"],
         "TaskDependency": ["task_id", "depends_on_task_id"]
     },
     "keys": {
