@@ -1,0 +1,53 @@
+{
+    "tables": {
+        "Project":["project_id", "project_title", "budget", "start_date", "end_date", "client_id", "client_name", "client_company", "phone_number", "email"],
+        "Developer": ["developer_id", "name", "email"],
+        "DeveloperSkillSet": ["developer_id", "skill"],
+        "Game": ["game_id", "game_title", "genre", "platform", "project_id"],
+        "Task": ["task_id", "task_name", "deadline", "description", "developer_id"],
+        "Client": ["client_id", "client_name", "client_company", "phone_number", "email"],
+        "Publisher": ["publisher_id", "publisher_name", "publisher_company"],
+        "SoftwareTool": ["tool_id", "tool_name", "license_type"],
+        "Milestone": ["milestone_id", "project_id", "milestone_name", "due_date"],
+        "FullTimeDeveloper": ["developer_id", "office_location"],
+        "Freelancer": ["developer_id", "name", "email", "contract_sign_date"],
+        "Employee": ["developer_id"],
+        "ProductManager": ["developer_id"],
+        "BusinessPartner": ["partner_id", "business_type"],
+        "ProjectDeveloper": ["project_id", "developer_id"],
+        "ProjectTool": ["project_id", "tool_id"],
+        "TaskDependency": ["task_id", "depends_on_task_id"]
+    },
+    "keys": {
+        "Project":["project_id (PK)", "client_id (FK)"],
+        "Developer": ["developer_id (PK)"],
+        "DeveloperSkillSet": ["developer_id, skill (PK)", "developer_id (FK)"],
+        "Game": ["game_id (PK)", "project_id (FK)"],
+        "Task": ["developer_id (PK)"],
+        "Client": ["client_id (PK)"],
+        "Publisher": ["publisher_id (PK)"],
+        "SoftwareTool": ["tool_id (PK)"],
+        "Milestone": ["milestone_id, project_id (PK)", "project_id (FK)"],
+        "FullTimeDeveloper": ["developer_id (PK)", "developer_id (FK)"],
+        "Freelancer": ["developer_id, contract_sign_date (PK)", "developer_id (FK)"],
+        "Employee": ["developer_id (PK)", "developer_id (FK)"],
+        "ProductManager": ["developer_id (PK)", "developer_id (FK)"],
+        "BusinessPartner": ["partner_id (PK)"],
+        "ProjectDeveloper": ["project_id, developer_id (PK)", "project_id (FK)", "developer_id (FK)"],
+        "ProjectTool": ["project_id, tool_id (PK)", "project_id (FK)", "tool_id (FK)"],
+        "TaskDependency": ["task_id, depends_on_task_id (PK)", "task_id (FK)", "depends_on_task_id (FK)"]
+    },
+    "functional_dependencies": [
+        ["project_id", ["project_title", "budget", "start_date", "end_date", "client_id", "developer_id", "tool_id"]],
+        ["developer_id", ["name", "email", "office_location"]],
+        ["game_id", ["game_title", "genre", "platform", "project_id"]],
+        ["task_id", ["task_name", "deadline", "description", "developer_id"]],
+        ["client_id", ["client_name", "client_company", "phone_number", "email"]],
+        ["publisher_id", ["publisher_name", "publisher_company"]],
+        ["tool_id", ["tool_name", "license_type"]],
+        ["milestone_id, project_id", ["milestone_name", "due_date"]],
+        ["partner_id", ["business_type"]],
+        ["task_id", ["depends_on_task_id"]]
+    ],
+    "explanation": ""
+}

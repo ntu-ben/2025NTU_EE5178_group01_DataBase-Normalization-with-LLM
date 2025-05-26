@@ -11,9 +11,9 @@
     "trains": ["running_date, train_id (PK)"],
     "attendants": ["running_date, train_id, attendants_seq_num (PK)", "attendants_id"],
     "timetable": ["running_date, train_id, station_sequence (PK)", "running_date, train_id (FK)", "meet_train_running_date, meet_train_id (FK)"],
-    "rolling_stock": ["rsid (PK)", "insurance_id (FK)", "insurance_premium (FK)", "sum_assured (FK)"],
-    "train_composition": ["running_date, train_id, carriage_seq_num (PK)", "running_date, train_id (FK)", "rsid (FK)", "employee_id, employee_name (FK)"],
-    "employee": ["employee_id (PK)", "insurance_id (FK)", "insurance_premium (FK)", "sum_assured (FK)"]
+    "rolling_stock": ["rsid (PK)", "insurance_id (FK)"],
+    "train_composition": ["running_date, train_id, carriage_seq_num (PK)", "running_date, train_id (FK)", "rsid (FK)", "employee_id (FK)"],
+    "employee": ["employee_id (PK)", "insurance_id (FK)"]
   },
   "functional_dependencies":[
     ["running_date, train_id", ["train_type", "origin", "destination", "driver_id", "conductor_id", "attendants_id"]],

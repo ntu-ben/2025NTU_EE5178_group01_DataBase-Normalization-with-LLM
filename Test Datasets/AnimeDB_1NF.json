@@ -1,0 +1,37 @@
+{
+  "tables": {
+    "Animation_Studio": ["animation_studio_name", "foundation_date", "num_of_workers"],
+    "Comic_Author": ["author_name", "birthday", "education"],
+    "Screen_Writer": ["screen_writer_name", "birthday", "education"],
+    "Animation": ["animation_id", "title", "description"],
+    "Animation_Main_Character": ["main_character", "animation_id"],
+    "Anime_Series": ["animation_id", "company_name"],
+    "Series": ["series_number", "animation_id", "title", "description", "num_of_episode", "series_name", "author_name", "birthday", "education", "animation_studio_name", "foundation_date", "num_of_workers"],
+    "Anime_Movie": ["animation_id", "company_name"],
+    "Adaption": ["animation_id", "author_name", "animation_studio_name"],
+    "Original": ["animation_id", "sequal_id", "author_name", "screenwriter_name"],
+    "Creator": ["creator_name", "comment", "evaluation", "representative_work", "entity_type"]
+  },
+  "keys": {
+    "Animation_Studio": ["animation_studio_name (PK)"],
+    "Comic_Author": ["author_name (PK)"],
+    "Screen_Writer": ["screen_writer_name (PK)"],
+    "Animation": ["animation_id (PK)"],
+    "Animation_Main_Character": ["main_character, animation_id (PK)"],
+    "Anime_Series": ["animation_id (PK)", "animation_id (FK)"],
+    "Series": ["animation_id, series_number (PK)", "animation_id (FK)", "author_name (FK)", "animation_studio_name (FK)"],
+    "Anime_Movie": ["animation_id (PK)", "animation_id (FK)"],
+    "Adaption": ["animation_id (PK)", "animation_id (FK)", "author_name (FK)", "animation_studio_name (FK)"],
+    "Original": ["animation_id (PK)", "animation_id (FK)", "sequal_id (FK)", "author_name (FK)", "screenwriter_name (FK)"],
+    "Creator": ["creator_name (PK)", "creator_name (FK)"]
+  },
+  "functional_dependencies": [
+      ["animation_studio_name", ["foundation_date", "num_of_workers"]], 
+      ["author_name", ["birthday", "education"]], 
+      ["screen_writer_name", ["birthday", "education"]], 
+      ["animation_id", ["title", "description", "company_name", "author_name", "animation_studio_name", "sequal_id", "author_name", "screenwriter_name"]], 
+      ["series_number, animation_id", ["title", "description", "num_of_episode", "series_name", "author_name", "birthday", "education", "animation_studio_name", "foundation_date", "num_of_workers"]], 
+      ["creator_name", ["comment", "evaluation", "representative_work", "entity_type"]]
+    ],
+  "explanation": ""
+}
