@@ -16,8 +16,8 @@
     "Payment":["payment_id (PK)"],
     "Review": ["review_id, product_id (PK)", "product_id (FK)"],
     "PotentialCustomer": ["customer_id (PK)", "user_id (FK)"],
-    "PotentialUser": ["user_id (PK)"],
-    "PotentialGuest": ["guest_id (PK)"]
+    "PotentialUser": ["user_id (PK)", "user_id (FK)"],
+    "PotentialGuest": ["guest_id (PK)", "guest_id (FK)"]
   },
   "functional_dependencies":[
     ["user_id", ["first_name", "last_name", "email"]],
